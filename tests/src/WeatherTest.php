@@ -13,6 +13,6 @@ class WeatherTest extends \PHPUnit_Framework_TestCase
 
     public function testWeather()
     {
-        $this->assertTrue($this->weather->weather());
+        $this->assertEquals(14, $this->weather->weather(), '14th day, 2 temp, 61 to 59');
     }
 }

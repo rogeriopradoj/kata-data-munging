@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "9694027c49d771ce075367d3c8fb7f1e",
+    "hash": "8377e5c4989e8c593cc3caeece2e8b91",
     "packages": [
         {
             "name": "phpunit/php-code-coverage",
@@ -383,6 +383,47 @@
                 "xunit"
             ],
             "time": "2014-05-02 07:04:11"
+        },
+        {
+            "name": "rogeriopradoj/php-excel",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rogeriopradoj/php-excel.git",
+                "reference": "cc7a66fcf99213037e8b02fe76b61ec4753741e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rogeriopradoj/php-excel/zipball/cc7a66fcf99213037e8b02fe76b61ec4753741e0",
+                "reference": "cc7a66fcf99213037e8b02fe76b61ec4753741e0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "php-excel.class.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Schwarz",
+                    "email": "oliver.schwarz@gmail.com"
+                }
+            ],
+            "description": "A way to install oliverschwarz/php-excel via composer",
+            "keywords": [
+                "excel",
+                "php-excel",
+                "spreadsheet"
+            ],
+            "time": "2013-07-17 22:23:44"
         },
         {
             "name": "sebastian/comparator",
