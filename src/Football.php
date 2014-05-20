@@ -2,34 +2,11 @@
 
 namespace DataMunging;
 
-class Football
+class Football extends AbstractDataMunging
 {
-    private $dataFile;
-    private $data;
-
     public function __construct()
     {
         $this->loadDataFile(__DIR__ . '../../data/football.dat');
-    }
-
-    public function loadDataFile($file)
-    {
-        $this->dataFile = $file;
-        $this->data = file_get_contents($this->dataFile);
-        return (boolean) count($this->data);
-    }
-
-    public function loadDataFileToArrayOfLines()
-    {
-        $file = fopen($this->dataFile, "r");
-        $lines = array();
-
-        while (!feof($file)) {
-            $lines[] = fgets($file);
-        }
-
-        fclose($file);
-        return $lines;
     }
 
     public function football()

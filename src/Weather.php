@@ -2,21 +2,11 @@
 
 namespace DataMunging;
 
-class Weather
+class Weather extends AbstractDataMunging
 {
-    private $dataFile;
-    private $data;
-
     public function __construct()
     {
         $this->loadDataFile(__DIR__ . '../../data/weather.dat');
-    }
-
-    public function loadDataFile($file)
-    {
-        $this->dataFile = $file;
-        $this->data = file_get_contents($this->dataFile);
-        return (boolean) count($this->data);
     }
 
     public function weather()
@@ -29,14 +19,7 @@ class Weather
         $dayOfMinSpread = 0;
         $minSpread = 100;
 
-        $file = fopen($this->dataFile, "r");
-        $lines = array();
-
-        while (!feof($file)) {
-           $lines[] = fgets($file);
-        }
-
-        fclose($file);
+        $lines = $this->loadDataFileToArrayOfLines();
 
         for ($i = 1; $i < $lineStartData; $i++) {
             array_shift($lines);
